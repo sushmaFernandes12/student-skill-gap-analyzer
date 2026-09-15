@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Skill-Gap Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Skill-Gap Analyzer</h1>
+        <p>Find the skills you need for your dream career</p>
+    </header>
+
+    <main>
+
+        <section class="container">
+
+            <h2>Analyze Your Skills</h2>
+
+            <label for="name">Student Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name">
+
+            <label for="role">Choose Your Target Job Role</label>
+
+            <select id="role">
+                <option value="">-- Select Job Role --</option>
+                <option value="web-developer">Web Developer</option>
+                <option value="java-developer">Java Developer</option>
+                <option value="python-developer">Python Developer</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="software-developer">Software Developer</option>
+                <option value="frontend-developer">Frontend Developer</option>
+                <option value="backend-developer">Backend Developer</option>
+            </select>
+
+            <div id="roleDetails"></div>
+
+            <label for="level">Your Current Skill Level</label>
+
+            <select id="level">
+                <option value="">-- Select Skill Level --</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <label>Your Current Skills</label>
+
+            <p class="skill-info">
+                Select the skills you currently know:
+            </p>
+
+               <div class="skills" id="skillsContainer">
+
+    <!-- Skills will be loaded from the database -->
+
+</div>
+            
+
+            <button onclick="analyzeSkills()">
+                Analyze Skills
+            </button>
+
+            <button class="reset-btn" onclick="resetAnalyzer()">
+                Reset
+            </button>
+
+            <button class="report-btn" onclick="printReport()">
+                🖨️ Print / Save Report
+            </button>
+
+            <button class="download-btn" onclick="downloadReport()">
+                📥 Download Report
+            </button>
+
+            <div id="result"></div>
+
+            <div id="savedAnalysis"></div>
+
+            <div id="dashboard"></div>
+            <div id="roadmap"></div>
+            <div id="skillProgress"></div>
+            <div style="margin-bottom: 15px; text-align: right;">
+
+    <button
+        type="button"
+        onclick="clearHistory()"
+        style="
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        ">
+        🗑️ Clear History
+    </button>
+
+</div>
+
+<div id="history"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Student Skill-Gap Analyzer</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,780 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.20);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+main {
+    padding: 35px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.container h2 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.container > label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #334155;
+}
+
+
+/* =========================================
+   SKILL INFORMATION
+========================================= */
+
+.skill-info {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.skills label {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+.skills label:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+.skills input {
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.reset-btn {
+    background: #64748b;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background: #475569;
+}
+
+.report-btn {
+    background: #16a34a;
+    margin-top: 10px;
+}
+
+.report-btn:hover {
+    background: #15803d;
+}
+
+.download-btn {
+    background: #7c3aed;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background: #6d28d9;
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+#result,
+#savedAnalysis,
+#dashboard {
+    margin-top: 22px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+#result {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+}
+
+#savedAnalysis {
+    background: #f0fdf4;
+    border-left: 5px solid #16a34a;
+}
+
+#dashboard {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+}
+
+#result h3,
+#savedAnalysis h3,
+#dashboard h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+#result ul {
+    margin-left: 20px;
+}
+
+#result li {
+    margin: 10px 0;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card h4 {
+    margin-bottom: 7px;
+    color: #475569;
+}
+
+.dashboard-card strong {
+    font-size: 24px;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   COURSE LINKS
+========================================= */
+
+#result a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#result a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================
+   LEARNING ROADMAP
+========================================= */
+
+#roadmap {
+    margin-top: 22px;
+    padding: 22px;
+    background: #f8fafc;
+    border-left: 5px solid #7c3aed;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#roadmap h3 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.roadmap-step {
+    background: white;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+.roadmap-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.roadmap-step strong {
+    color: #2563eb;
+}
+
+.roadmap-step p {
+    margin-top: 5px;
+    color: #475569;
+}
+
+.roadmap-priority {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 9px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+
+/* =========================================
+   SKILL PROGRESS
+========================================= */
+
+#skillProgress {
+    margin-top: 22px;
+    padding: 22px;
+    background: #f0f9ff;
+    border-left: 5px solid #0891b2;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#skillProgress h3 {
+    color: #0891b2;
+    margin-bottom: 15px;
+}
+
+.skill-progress-item {
+    background: white;
+    margin: 10px 0;
+    padding: 13px 15px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-completed {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.skill-missing {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.skill-status {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   JOB ROLE DETAILS
+========================================= */
+
+.role-details {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f0f7ff;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.role-details h3 {
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+
+.role-details p {
+    margin: 8px 0;
+}
+
+
+/* =========================================
+   MISSING SKILLS
+========================================= */
+.missing-skills-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+}
+
+.missing-skills-box ul {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.missing-skills-box li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   ANALYSIS HISTORY
+========================================= */
+
+#history {
+    margin-top: 30px;
+}
+
+#history h3 {
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.history-card {
+    background: #ffffff;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: 0.2s;
+}
+
+.history-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+}
+
+.history-card h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+
+.history-card p {
+    margin: 8px 0;
+}
+
+
+/* =========================================
+   CLEAR HISTORY BUTTON
+========================================= */
+
+#history + * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+    background: #1e293b;
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .skill-progress-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+/* =========================================================
+   FINAL PROFESSIONAL UI POLISH
+========================================================= */
+
+body {
+    line-height: 1.6;
+}
+
+h2, h3, h4 {
+    letter-spacing: 0.2px;
+}
+
+button {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   RESULT / DASHBOARD CARDS
+========================================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.dashboard-card {
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card h4 {
+    margin-bottom: 8px;
+}
+
+.dashboard-card strong {
+    font-size: 26px;
+}
+
+
+/* =========================================================
+   PROGRESS BARS
+========================================================= */
+
+.progress-bar {
+    margin-top: 10px;
+    height: 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #e5e7eb;
+}
+
+.progress-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: width 0.6s ease;
+}
+
+
+/* =========================================================
+   MISSING SKILLS
+========================================================= */
+
+.missing-skills-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255, 245, 245, 0.95);
+    border: 1px solid #f1caca;
+}
+
+.missing-skills-box ul {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.missing-skills-box li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap-step {
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.roadmap-step strong {
+    font-size: 17px;
+}
+
+.roadmap-priority {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #eef2ff;
+}
+
+
+/* =========================================================
+   SKILL PROGRESS
+========================================================= */
+
+.skill-progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e5e7eb;
+}
+
+.skill-status {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HISTORY CARDS
+========================================================= */
+
+.history-card {
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.history-card h4 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   COURSE LINKS
+========================================================= */
+
+#result a {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#result a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 16px;
+    }
+
+    .skill-progress-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .roadmap-step {
+        padding: 15px;
+    }
+
+}
